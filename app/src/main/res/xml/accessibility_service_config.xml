@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:accessibilityEventTypes="typeWindowsChanged"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows"
+    android:accessibilityFeedbackType="feedbackHaptic"
+    android:notificationTimeout="100"
+    android:canRetrieveWindowContent="true"
+    android:settingsActivity="com.runo.acessibilitykeyboarddetector.MainActivity"
+    />
+
+<!--    android:packageNames="com.example.android.apis"-->
+<!--    android:description="desc"-->
