@@ -11,13 +11,11 @@ import kotlinx.coroutines.coroutineScope
 class KeyboardService: AccessibilityService() {
 
     var keyboardState = false
-//    var triggerCount = 0
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
-//        Log.d("keyboardService", "onAccessibilityEvent: triggered $triggerCount")
-//        triggerCount++
         try {
             var keyboardOpened = false
             for (windowInfo in windows) {
+
                 if (windowInfo.type == AccessibilityWindowInfo.TYPE_INPUT_METHOD) {
                     keyboardOpened = true
                 }
@@ -43,7 +41,7 @@ class KeyboardService: AccessibilityService() {
     }
 
     override fun onUnbind(intent: Intent?): Boolean {
-        startOrStop(true, "uinput_titan")
+        startOrStop(false, "uinput_titan")
         return super.onUnbind(intent)
     }
     override fun onInterrupt() {
